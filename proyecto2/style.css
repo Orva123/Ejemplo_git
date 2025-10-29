@@ -1,0 +1,211 @@
+body {
+    /* Elimina las propiedades de background-image del body */
+    margin: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.page-container {
+  /* Set initial state */
+  opacity: 0; 
+  
+  /* Apply the animation */
+  animation-name: fade-in;
+  animation-duration: 2s; /* Adjust as needed */
+  animation-delay: 3s; /* The 5-second delay you requested */
+  animation-fill-mode: forwards;
+}
+
+/* Define the keyframes for the animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#background-video {
+   
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- ESTILOS DEL MENÚ FIJO EN EL ENCABEZADO --- */
+.main-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 10px 0; /* Espaciado interno para el menú */
+}
+
+.header-menu {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Centra el menú horizontalmente */
+}
+
+/* --- ESTILOS PARA EL TÍTULO CENTRADO --- */
+.title-container {
+    /* Mueve el contenedor del título hacia abajo para que no quede detrás del menú fijo */
+    margin-top: 100px; /* Ajusta este valor según la altura de tu menú */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Resto de tu código CSS para el menú */
+.nav-bar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 60px;
+    background-image: url('img/casita.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.nav-link i, .icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.icon {
+    width: 40px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.shield {
+    background-image: url('img/stark.png');
+}
+
+.dragon {
+    background-image: url('img/lanister.png');
+}
+
+.home-button i {
+    color: #ffd700;
+}
+
+/* Define your custom font */
+@font-face {
+    font-family: 'MedievalCursive'; /* Dale un nombre a tu fuente */
+    src: url('fonts/MedievalCursive.ttf') format('truetype'); /* Ruta a tu archivo de fuente */
+    /* Puedes añadir más formatos para mayor compatibilidad si tienes los archivos (.woff, .woff2) */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Luego, aplica esta fuente a tu texto */
+.medieval-text {
+    font-family: 'Uncial Antiqua', cursive; /* Aplica la fuente de Google Fonts */
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #a08b62c0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    background-image: url('img/parchment-background.png');
+    background-size: cover;
+    padding: 0px;
+    border-radius: 10px;
+    margin: -60px auto;
+    max-width: 600px;
+}
+
+ 
+
+/* Contenedor para centrar los botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre los botones */
+    margin-top: 100px; /* Ajusta el espacio superior para separarlo del texto */
+    z-index: 10;
+}
+
+/* Estilos base para los botones */
+.medieval-button {
+    font-family: 'Uncial Antiqua', cursive;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Efecto hover para los botones */
+.medieval-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Estilos específicos para el botón de Héroes */
+.hero-button {
+    background-color: #2e1a52; /* Un color verde noble */
+    border: 2px solid #2f1b5f;
+}
+
+/* Estilos específicos para el botón de Antagonistas */
+.antagonist-button {
+    background-color: #680c0c; /* Un color rojo oscuro */
+    border: 2px solid hsl(0, 48%, 42%);
+}
