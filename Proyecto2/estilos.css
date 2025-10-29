@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'MedievalSharp', serif;
+  background: url('img/32lONfLyE48wAyyovWUL23bRMgH.mp4') center/cover no-repeat fixed;
+  color: #c0c0c0;
+  min-height: 100vh;
+  cursor: url('cursors/sword.cur'), auto;
+  transition: background 1s;
+}
+
+header {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.logo {
+  width: 420px;
+  max-width: 90vw;
+  margin-bottom: 20px;
+  animation: fadeInDown 1.2s;
+}
+
+.titulo-fantasia {
+  font-size: 3.5rem;
+  color: #ac3e3e;
+  text-shadow: 0 0 10px #3e3e3e, 0 0 30px #000;
+  margin: 0;
+  letter-spacing: 2px;
+  animation: fadeInDown 1.2s;
+}
+
+.sinopsis {
+  font-size: 1.3rem;
+  margin: 20px auto 30px auto;
+  max-width: 600px;
+  color: #d1d1d1;
+  background: rgba(30,30,30,0.95);
+  border-radius: 12px;
+  padding: 15px 25px;
+  box-shadow: 0 0 12px #2c2c2c;
+  animation: fadeIn 2s;
+}
+
+.menu {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.menu a {
+  font-family: 'MedievalSharp', serif;
+  font-size: 1.4rem;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.4s, box-shadow 0.4s, color 0.4s;
+  box-shadow: 0 0 10px #3e3e3e;
+  border: 2px solid #7e3b3b;
+  background: linear-gradient(90deg, #1b1b1b, #2c2c2c);
+  color: #d1d1d1;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.menu a:hover {
+  background: linear-gradient(90deg, #2c2c2c, #1b1b1b);
+  color: #aa1919;
+  box-shadow: 0 0 20px #803030, 0 0 40px #000;
+  cursor: url('cursors/sword.cur'), pointer;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+
+/* HEROES PAGE */
+.heroes-bg {
+  background: linear-gradient(120deg, #0f0f0f 80%, #1b1b1b 100%);
+  color: #c0c0c0;
+  transition: background 1s;
+}
+
+.fichas-heroes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.ficha-heroe {
+  background: linear-gradient(135deg, #1b1b1b 80%, #2c2c2c 100%);
+  border: 3px solid #3e3e3e;
+  border-radius: 18px;
+  box-shadow: 0 0 24px #000;
+  color: #d1d1d1;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: url('cursors/sword.cur'), pointer;
+  animation: fadeIn 1s;
+  margin-bottom: 20px;
+}
+
+.ficha-heroe img {
+  width: 100%;
+  border-bottom: 2px solid #3e3e3e;
+}
+
+.ficha-heroe .nombre {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  text-align: center;
+}
+
+.ficha-heroe .atributos {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.ficha-heroe .atributo {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.ficha-heroe .descripcion {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(20, 20, 20, 0.95);
+  color: #c0c0c0;
+  width: 100%;
+  padding: 1rem;
+  transition: opacity 0.4s;
+  pointer-events: none;
+  font-size: 1rem;
+  border-top: 2px solid #3e3e3e;
+}
+
+.ficha-heroe:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 0 40px #973030, 0 0 80px #000;
+}
+
+.ficha-heroe:hover .descripcion {
+  opacity: 1;
+}
+
+/* ANTAGONISTAS PAGE */
+.antagonistas-bg {
+  background: linear-gradient(120deg, #0e0e0e 80%, #1a0e1a 100%);
+  color: #c0c0c0;
+  transition: background 1s;
+}
+
+.fichas-antagonistas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.ficha-antagonista {
+  background: linear-gradient(135deg, #1a0e1a 80%, #2a0d1f 100%);
+  border: 3px solid #3e3e3e;
+  border-radius: 18px;
+  box-shadow: 0 0 24px #000;
+  color: #c0c0c0;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: url('cursors/magic.cur'), pointer;
+  animation: fadeIn 1s;
+  margin-bottom: 20px;
+}
+
+.ficha-antagonista img {
+  width: 100%;
+  border-bottom: 2px solid #3e3e3e;
+}
+
+.ficha-antagonista .nombre {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  text-align: center;
+}
+
+.ficha-antagonista .atributos {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.ficha-antagonista .atributo {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.ficha-antagonista .descripcion {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(10, 10, 10, 0.95);
+  color: #d1d1d1;
+  width: 100%;
+  padding: 1rem;
+  transition: opacity 0.4s;
+  pointer-events: none;
+  font-size: 1rem;
+  border-top: 2px solid #3e3e3e;
+}
+
+.ficha-antagonista:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 0 40px #aa1e1e, 0 0 80px #000;
+}
+
+.ficha-antagonista:hover .descripcion {
+  opacity: 1;
+}
+
+#video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .fichas-heroes, .fichas-antagonistas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .ficha-antagonista,
+  .ficha-heroe {
+    max-width: 90vw;
+  }
+
+  .logo {
+    width: 80vw;
+  }
+
+  .titulo-fantasia {
+    font-size: 2.2rem;
+  }
+}
+
+video.fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
